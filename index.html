@@ -86,9 +86,18 @@ input,textarea,select,button{font-family:inherit}
 </section>
 
 <div style="background:#141414;color:#F2EFE8;overflow:hidden;border-top:2px solid #141414;border-bottom:2px solid #141414">
+  <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
   <div style="max-width:1240px;margin:0 auto;padding:22px 24px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:26px;text-transform:uppercase;letter-spacing:0.03em">
     <span>Takmičarske pripreme</span><span style="color:#C8F03C">✕</span><span>Mršavljenje</span><span style="color:#C8F03C">✕</span><span>Mišićna masa</span><span style="color:#C8F03C">✕</span><span>Snaga</span>
   </div>
+  </sc-if>
+  <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
+  <div style="padding:22px 20px;display:flex;flex-direction:column;align-items:center;gap:10px;font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:24px;text-transform:uppercase;letter-spacing:0.03em;text-align:center">
+    <span>Takmičarske pripreme</span>
+    <div style="display:flex;align-items:center;gap:14px"><span>Mršavljenje</span><span style="color:#C8F03C">✕</span><span>Mišićna masa</span></div>
+    <span>Snaga</span>
+  </div>
+  </sc-if>
 </div>
 
 <section id="kako" style="max-width:1240px;margin:0 auto;padding:112px 24px">
